@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeWage1
 {
-    internal class SwitchStatement
+    internal class UC6MonthDayEnd
     {
         public int EmployeeWagePerHour = 20;
         public int DailyWage = 0;
