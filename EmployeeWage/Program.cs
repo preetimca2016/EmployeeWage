@@ -1,4 +1,6 @@
-﻿namespace EmployeeWage
+﻿using EmployeeWage1;
+
+namespace EmployeeWage
 {
     internal class Program
     {
@@ -15,27 +17,54 @@
             Console.WriteLine("UC8-MultipleCompany");
             Console.WriteLine("UC9-EmptotalWage");
             Console.WriteLine("UC10-Multiple companies");
-            int Answer = Convert.to
-            UC1EmployeePresentAbsent employee = new UC1EmployeePresentAbsent();
-            employee.PresentAbsent();
+            int Answer = Convert.ToInt32(Console.ReadLine());
+            
+            switch (Answer)
+            {
+                case 1:
+                    UC1EmployeePresentAbsent employee = new UC1EmployeePresentAbsent();
+                    employee.PresentAbsent();
+                    break;
+                case 2:
+                    UC2DailyWage wage = new UC2DailyWage();
+                    wage.DailyWage();
+                    break;
+                case 3:
+                    UC3PartTimeWage PartTimeWage = new UC3PartTimeWage();
+                    PartTimeWage.EmployeePartTimeWage();
+                    break;
+                case 4:
+                    UC4SwitchStatement Switchwage = new UC4SwitchStatement();
+                    Switchwage.SwitchDailyWage();
+                    break;
+                case 5:
+                    UC5MonthWage monthWageObj = new UC5MonthWage();
+                    monthWageObj.MonthlyWage();
+                    break;
+                case 6:
+                    UC6MonthDayEnd monthDayendObj = new UC6MonthDayEnd();
+                    monthDayendObj.TotalDailyWage();
+                    break;
+                case 7:
+                    UC7_RefactorEmpWage.computeEmpWage();
+                    break;
+                case 8:
+                  //  Company.Calculations();
+                    break;
 
-            UC2DailyWage wage = new UC2DailyWage();
-            wage.DailyWage();
+            }
+           
 
-            UC3PartTimeWage PartTimeWage = new UC3PartTimeWage();
-            PartTimeWage.EmployeePartTimeWage();
 
-            UC4SwitchStatement switchwage = new UC4SwitchStatement();
-            switchwage.SwitchDailyWage();
+            
 
-            Console.WriteLine("Total Monthly wage is :- ");
-            UC5MonthWage monthWage = new UC5MonthWage();
-            monthWage.MonthlyWage();
 
-            EmployeeWageBuilderArray empWageBuilder = new EmployeeWageBuilderArray();
-            empWageBuilder.addCompanyEmpWage("DMart", 20, 2, 10);
-            empWageBuilder.addCompanyEmpWage("Reliance", 10, 4, 20);
-            empWageBuilder.addcomputeEmpWage();
+            
+
+            //EmployeeWageBuilderArray empWageBuilder = new EmployeeWageBuilderArray();
+            //empWageBuilder.addCompanyEmpWage("DMart", 20, 2, 10);
+            //empWageBuilder.addCompanyEmpWage("Reliance", 10, 4, 20);
+            //empWageBuilder.addcomputeEmpWage();
 
 
         }
