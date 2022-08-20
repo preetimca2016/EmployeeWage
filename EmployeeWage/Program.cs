@@ -49,9 +49,21 @@ namespace EmployeeWage
                     UC7_RefactorEmpWage.computeEmpWage();
                     break;
                 case 8:
-                  //  Company.Calculations();
+                    Company companyObj1 = new Company("DMart", 20, 2, 10);
+                    companyObj1.Calculations();
+                    Console.WriteLine(companyObj1.Present_Check());
+                    Company companyObj2 = new Company("Reliance", 10, 4, 20);
+                    companyObj2.Calculations();
+                    Console.WriteLine(companyObj2.Present_Check());
                     break;
-
+                case 9:
+                    EmpWageBuilderObject dMart = new EmpWageBuilderObject("DMart", 20, 2, 10);
+                    EmpWageBuilderObject reliance = new EmpWageBuilderObject("Reliance", 10, 4, 20);
+                    dMart.ComputeEmpWage();
+                    Console.WriteLine(dMart.toString());
+                    reliance.ComputeEmpWage();
+                    Console.WriteLine(reliance.toString());
+                    break;
             }
            
 

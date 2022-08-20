@@ -14,6 +14,18 @@ namespace EmployeeWage
         public int Part_Hr_Per_Day;
         public int Max_Working_Days;
         public int Max_Working_Hrs;
+        private string v1;
+        private int v2;
+        private int v3;
+        private int v4;
+
+        public Company(string v1, int v2, int v3, int v4)
+        {
+            this.v1 = v1;
+            this.v2 = v2;
+            this.v3 = v3;
+            this.v4 = v4;
+        }
 
         public Company(string Company_Name, int Wage_Per_Hr, int Full_Hr_Per_Day, int Part_Hr_Per_Day, int Max_Working_Days, int Max_Working_Hrs)
         {
@@ -23,6 +35,16 @@ namespace EmployeeWage
             this.Part_Hr_Per_Day = Part_Hr_Per_Day;
             this.Max_Working_Days = Max_Working_Days;
             this.Max_Working_Hrs = Max_Working_Hrs;
+        }
+
+        internal void Calculations()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal bool Present_Check()
+        {
+            throw new NotImplementedException();
         }
     }
     class Wage_Computation
@@ -37,7 +59,7 @@ namespace EmployeeWage
             Companies_Dict.Add(Company_Name.ToLower(), comp_Obj);
         }
 
-        private int Present_Check()
+        public int Present_Check()
         {
             return new Random().Next(0, 3);
         }
