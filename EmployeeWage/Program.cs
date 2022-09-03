@@ -17,7 +17,8 @@ namespace EmployeeWage
             Console.WriteLine("UC8-MultipleCompany");
             Console.WriteLine("UC9-EmptotalWage");
             Console.WriteLine("UC10-Multiple companies");
-            Console.WriteLine("UC11-InstanceVariables");
+            Console.WriteLine("UC12-Multiple companies using Arraylist");
+            Console.WriteLine("UC13-total Wage");
             int Answer = Convert.ToInt32(Console.ReadLine());
             
             switch (Answer)
@@ -66,12 +67,23 @@ namespace EmployeeWage
                     Console.WriteLine(reliance.toString());
                     break;
                 case 10:
+                    //EmpWageBuilder empWageBuilder = new EmpWageBuilder();
+                    //empWageBuilder.AddCompany("Relaince", 4000, 84, 258);
+                    //empWageBuilder.AddCompany("Godrej", 940, 80, 240);
+                    //empWageBuilder.AddCompany("Google", 250, 90, 850);
+                    //empWageBuilder.AddCompany("TATA", 8000, 50, 200);
+                    //empWageBuilder.DisplayCompanyWages();
+                    break;
+                case 12:
                     EmpWageBuilder empWageBuilder = new EmpWageBuilder();
                     empWageBuilder.AddCompany("Relaince", 4000, 84, 258);
                     empWageBuilder.AddCompany("Godrej", 940, 80, 240);
                     empWageBuilder.AddCompany("Google", 250, 90, 850);
                     empWageBuilder.AddCompany("TATA", 8000, 50, 200);
                     empWageBuilder.DisplayCompanyWages();
+                    break;
+                case 13:
+                    Console.WriteLine("Store Daily Wage");
                     break;
                 
             }
