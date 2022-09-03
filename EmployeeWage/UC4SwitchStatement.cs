@@ -13,8 +13,8 @@ namespace EmployeeWage
             int EmpHrs = 0;
             int EmployeeWagePerHour = 20;
             int Dailywage=0;
-            int FullTime = 1;
-            int PartTime = 2;
+            //int FullTime = 1;
+            //int PartTime = 2;
 
             Random EmpCheck = new Random();
             int Check = EmpCheck.Next(0, 3);

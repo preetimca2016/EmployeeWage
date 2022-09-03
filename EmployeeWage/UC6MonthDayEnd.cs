@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeeWage1
+namespace EmployeeWage
 {
     internal class UC6MonthDayEnd
     {

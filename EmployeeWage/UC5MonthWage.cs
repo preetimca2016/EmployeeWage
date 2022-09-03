@@ -13,8 +13,8 @@ namespace EmployeeWage
             int EmpHrs = 0;
             int EmployeeWagePerHour = 20;
             int Dailywage = 0;
-            int FullTime = 1;
-            int PartTime = 2;
+            //int FullTime = 1;
+            //int PartTime = 2;
             int NumberOfWorkingDays = 20;
             int TotalSalary = 0;
 

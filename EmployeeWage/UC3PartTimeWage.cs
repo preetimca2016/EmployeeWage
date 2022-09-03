@@ -30,8 +30,8 @@ namespace EmployeeWage
             }
             else
 {
-    Console.WriteLine("Employee Is Absent");
-    EmpHrs = 0;
+                 Console.WriteLine("Employee Is Absent");
+                 EmpHrs = 0;
 }
 Dailywage = EmployeeWagePerHour * EmpHrs;
 Console.WriteLine("Employee DailyWage is " + Dailywage);

@@ -30,11 +30,6 @@ namespace EmployeeWage
         public string toString()
         {
             return "Total Emp Wage for Company:" + this.company + " is:" + this.totalEmpWage;
-        }
-
-        internal bool tostring()
-        {
-            throw new NotImplementedException();
-        }
+        }        
     }
 }

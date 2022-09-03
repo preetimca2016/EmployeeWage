@@ -1,4 +1,4 @@
-﻿using EmployeeWage1;
+﻿using System;
 
 namespace EmployeeWage
 {
@@ -17,6 +17,7 @@ namespace EmployeeWage
             Console.WriteLine("UC8-MultipleCompany");
             Console.WriteLine("UC9-EmptotalWage");
             Console.WriteLine("UC10-Multiple companies");
+            Console.WriteLine("UC11-InstanceVariables");
             int Answer = Convert.ToInt32(Console.ReadLine());
             
             switch (Answer)
@@ -65,38 +66,13 @@ namespace EmployeeWage
                     Console.WriteLine(reliance.toString());
                     break;
                 case 10:
-                    EmployeeWageBuilderArray empWageBuilder = new EmployeeWageBuilderArray();
-                    empWageBuilder.addCompanyEmpWage("DMart", 20, 2, 10);
-                    empWageBuilder.addCompanyEmpWage("Reliance", 10, 4, 20);
-                    empWageBuilder.addcomputeEmpWage();
+                    var employeeWage = new EmployeeWage();
+                    employeeWage.AddEmpWage("Reliance", 20, 150, 10);
+                    employeeWage.AddEmpWage("Toyata", 12, 150, 20);
+                    employeeWage.ComputeEmpWage();
+                    employeeWage.ToString();
                     break;
-                case 11:
-                    AddNewCompany company = new AddNewCompany();
-                    for (int i = 0; i < 3; i++)
-                    {
-
-                        company.AddCompanyByArray();
-
-                        if (i == 2)
-                        {
-                            company.DisplayByArray();
-                        }
-                    }
-                    break;
-                case 12:
-                    AddNewCompany company = new AddNewCompany();
-                    Console.WriteLine("Enter y to add company");
-                    string input = Console.ReadLine();
-                    while (input == "y")
-                    {
-                        company.AddCompanyBylist();
-                        Console.WriteLine("Company Data Stored again enter y to add company");
-                        input = Console.ReadLine();
-
-                    }
-                    company.DisplayByList();
-
-                    break;
+                
             }
 
 
