@@ -66,11 +66,12 @@ namespace EmployeeWage
                     Console.WriteLine(reliance.toString());
                     break;
                 case 10:
-                    var employeeWage = new EmployeeWage();
-                    employeeWage.AddEmpWage("Reliance", 20, 150, 10);
-                    employeeWage.AddEmpWage("Toyata", 12, 150, 20);
-                    employeeWage.ComputeEmpWage();
-                    employeeWage.ToString();
+                    EmpWageBuilder empWageBuilder = new EmpWageBuilder();
+                    empWageBuilder.AddCompany("Relaince", 4000, 84, 258);
+                    empWageBuilder.AddCompany("Godrej", 940, 80, 240);
+                    empWageBuilder.AddCompany("Google", 250, 90, 850);
+                    empWageBuilder.AddCompany("TATA", 8000, 50, 200);
+                    empWageBuilder.DisplayCompanyWages();
                     break;
                 
             }

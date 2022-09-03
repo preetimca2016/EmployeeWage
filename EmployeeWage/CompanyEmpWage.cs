@@ -6,30 +6,29 @@ using System.Threading.Tasks;
 
 namespace EmployeeWage
 {
-    internal class CompanyWage
+    class CompanyEmpWage
     {
-        public string company;
-        public int empRatePerHour;
-        public int numOfWorkingDays;
-        public int maxHoursPerMonth;
-        public int totalEmpWage;
+        //Varibales
+        public string companyName;
+        public int wagePerHour;
+        public int maxWorkingDays;
+        public int maxWorkingHours;
+        int wagesPerMonth = 0;
 
-        public CompanyWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
+        public CompanyEmpWage(string companyName, int wagePerHour, int maxWorkingDays, int maxWorkingHours)
         {
-            this.company = company;
-            this.empRatePerHour = empRatePerHour;
-            this.numOfWorkingDays = numOfWorkingDays;   
-            this.maxHoursPerMonth = maxHoursPerMonth;   
+            this.companyName = companyName;
+            this.wagePerHour = wagePerHour;
+            this.maxWorkingDays = maxWorkingDays;
+            this.maxWorkingHours = maxWorkingHours;
         }
-
-        public void setTotalEmpWage(int totalEmpWage)
+        public void setWagesPerMonth(int wagesPerMonth)
         {
-            this.totalEmpWage = totalEmpWage;
+            this.wagesPerMonth = wagesPerMonth;
         }
-
-        public string toString()
+        public void printMonthlyWage()
         {
-            return "Total Emp Wage for Company:" + this.company + " is:" + this.totalEmpWage;
-        }        
+            Console.WriteLine($"Wages for the company {companyName} for the month : {wagesPerMonth}");
+        }
     }
 }
